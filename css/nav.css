@@ -1,0 +1,251 @@
+@font-face {
+	font-family: 'Hansief';
+	src: url('../fonts/Hansief.otf')
+}
+
+/*Scrolling nav porperty*/
+.scrolling-navbar {
+	-webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+	-moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+	transition: background .5s ease-in-out, padding .5s ease-in-out;
+	background: rgba(0,0,0, 0.7);
+	margin-top: -24px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	justify-content: center;
+}
+body{
+	 height: 100%;
+}
+.scrolling-navbar .navbar-nav > li {
+	transition-duration: 0.1s;
+}
+
+.scrolling-navbar .navbar-nav li a{
+	color: white;
+}
+
+.scrolling-navbar .navbar-nav li a:hover{
+	color: white;
+	border-bottom: white 3px solid;
+}
+
+/*Bars Property*/
+.bars{
+	position: absolute;
+	width: 4vh;
+	height: 4vh;
+	top: 30px;
+	right: 30px;
+	cursor: pointer;
+	z-index: 101;
+	padding-top: 9px;
+	mix-blend-mode: difference;
+}
+
+.bar {
+    width: 100%;
+    height: 0.8vh;
+    background-color: #fff;
+    position: absolute;
+}
+
+.bars span::before,
+.bars span::after {
+    content: "";
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    height: 0.8vh;
+    position: absolute;
+}
+
+.bar::before {
+    transform: translateY(-9px);
+}
+
+.bar::after {
+    transform: translateY(9px);
+}
+
+.bars.active .bar {
+    background-color: transparent;
+}
+
+.bars.active span::before {
+    animation: top-bar 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.bars.active span::after {
+    animation: bottom-bar 0.25s;
+    animation-fill-mode: forwards;
+}
+
+/*Custom Nav Property*/
+#customNav {
+    position: fixed;
+	width:100% !important;
+	height: 100% !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.1s;
+    z-index: -1;
+    overflow: hidden !important;
+    opacity: 0;
+}
+
+#customNav a {
+    color: #fff;
+    text-decoration: none;
+    /*line-height: 70vw;*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*text-indent: 50vw;*/
+    border-radius: 50%;
+    transition: all .5s;
+}
+
+#customNav ul li a:hover {
+    background: rgba(15, 7, 25, 0.7);
+}
+
+#customNav ul {
+    list-style: none;
+}
+
+nav.visible {
+    z-index: 100 !important;
+    opacity: 1 !important;
+}
+
+.shape-circle {
+    border-radius: 50%;
+    width: 20vw;
+    height: 20vw;
+    top: -10vw;
+    right: -10vw;
+    position: absolute;
+    transition: all 0.1s ease-in-out;
+    background-color: blue;
+	background-size: cover;
+    box-shadow: 0 0 0 rgba(15, 7, 25, 0.9);
+}
+
+
+/*Bubble Nav Child Prop*/
+nav.visible li:first-child {
+    z-index: 5;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 0 80px rgba(15, 7, 25, 0.9);
+}
+
+nav.visible li:nth-child(2) {
+    z-index: 6;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 0 80px rgba(15, 7, 25, 0.9);
+}
+
+nav.visible li:nth-child(3){
+    z-index: 7;
+    transition: all .4s ease-in-out;
+    box-shadow: 0 0 80px rgba(15, 7, 25, 0.9);
+/*	background-image: url('../images/thor.jpg');*/
+/*	background-position: left;*/
+/*	background-size: 300px 1200px;*/
+/*	background-repeat: no-repeat;*/
+}
+
+nav.visible li:nth-child(4){
+    z-index: 8;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0 0 80px rgba(15, 7, 25, 0.9);
+}
+
+nav.visible li:nth-child(5){
+    z-index: 9;
+    transition: all 0.6s ease-in-out;
+    box-shadow: 0 0 80px rgba(15, 7, 25, 0.9);
+}
+
+nav.visible li:nth-child(6){
+    z-index: 10;
+    transition: all 0.7s ease-in-out;
+    box-shadow: 0 0 80px rgba(15, 7, 25, 0.9);
+}
+
+nav.visible li:nth-child(7){
+    z-index: 11;
+    transition: all 0.8s ease-in-out;
+    box-shadow: 0 0 80px rgba(15, 7, 25, 0.9);
+}
+
+nav.visible li:last-child{
+    z-index: 12;
+    transition: all 0.9s ease-in-out;
+    box-shadow: 0 0 80px rgba(15, 7, 25, 0.9);
+}
+
+
+/*Bubble nav animations*/
+@keyframes top-bar {
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: rotate(45deg) translateY(0);
+    }
+}
+
+@keyframes bottom-bar {
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: rotate(-45deg) translateY(0);
+    }
+}
+
+
+
+/*
+.navText {
+    color: white;
+    font-size: 3vh;
+}
+
+
+Social Links Property in Bubble Nav
+.social_links {
+    position: relative;
+    bottom: 1vh;
+    right: -1vw;
+    z-index: 11;
+}
+
+.fb-link {
+    position: absolute;
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    align-content: center;
+    font-size: 5vh;
+}
+
+#loginImg{
+	margin-top:6.5vh;
+	width:auto;
+	height: 4.5vh;
+}
+
+.navbar-nav{
+    flex-direction: row;
+}*/
+.container1{
+	z-index: 0 !important;
+}

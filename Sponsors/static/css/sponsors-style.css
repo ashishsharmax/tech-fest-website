@@ -1,0 +1,117 @@
+
+body,html{
+	background-color: black;
+	overflow-x: hidden;
+}
+html {
+  overflow-x: initial !important;
+}
+
+
+#hm{
+	left: 2%;
+	top: 3%;
+	font-family: 'Cardo', serif;
+}
+
+.container{
+	padding-top: 10%;
+	padding-bottom: 5%;
+}
+
+.row{
+	padding-top: 5%;
+}
+.row>h1{
+	font-family: 'Montserrat', sans-serif ;
+  	font-size: 90px;
+	font-weight: 900;
+}
+h2{
+	color: white;
+}
+
+h3{
+	color: red;
+	font-family: 'Staatliches', cursive;
+	font-size: 35px;
+}
+
+
+@media only screen and (max-width: 500px ){
+	
+	.mobilenav li{
+		text-align: left;
+		padding-left: 20%;
+	}
+	.res{
+		display: block!important;
+			}
+	
+	
+	.fixed-frame  h5{
+	position: fixed;
+	top: 30px;
+	left: 30%;
+	}
+	
+	.fixed-frame h5 img{
+		width: 100px;
+	}
+
+	.absolute h2{
+		font-size: 70px;
+	}
+	.flip-clock-label{
+		display: none !important;
+	}
+
+    .mob-sec1{
+        padding-top: 25px;
+        
+    }
+	
+	.container{
+		padding-top: 15%;
+	}
+	.row>h1{
+		font-size: 40px;
+	}
+	
+	h2{
+		font-size: 25px;
+	}
+	#ash{
+		display: none;
+	}
+	.ash2{
+		width: 30%;
+	}
+	
+	#ash3{
+		position: absolute;
+		left: 130px;
+	}
+	.youtube-embed{
+		width: -50% !important;	
+	}
+	.videowrapper {
+    float: none;
+    clear: both;
+    width: 80%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+}
+
+
+
